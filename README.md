@@ -1,3 +1,5 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9522a3b7a90a496593b3fcb3f65d336a)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vincentferie/v1-ricvafront&amp;utm_campaign=Badge_Grade)
+
 # RIVCA ERP MULTI TENANT
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
