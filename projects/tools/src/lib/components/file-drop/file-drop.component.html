@@ -1,0 +1,17 @@
+<ngx-file-drop class="file-drop" [multiple]="multiple" (onFileDrop)="dropped($event)"
+  (onFileOver)="overred()" (onFileLeave)="leaved()">
+  <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+    <input type="file" id="browse-file" class="d-none" (change)="changed($event)">
+    <div class="ngx-file-drop-input-inner">
+      <div class="ngx-file-drop-input-icon"><i class="feather icon-upload-cloud"></i></div>
+      <div class="ngx-file-drop-input-text">
+        <h3>{{placeholder}}</h3>
+        <span class="ngx-file-drop-input-divide">ou</span>
+      </div>
+      <label for="browse-file">
+        <a class="ngx-file-drop-input-choose-btn btn btn-secondary waves-effect waves-light">{{browseTitle}}</a>
+      </label>
+      <ng-content select=".file-drop-info"></ng-content>
+    </div>
+  </ng-template>
+</ngx-file-drop>

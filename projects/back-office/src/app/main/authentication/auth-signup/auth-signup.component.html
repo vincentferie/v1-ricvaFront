@@ -1,0 +1,19 @@
+<h4 class="mb-3 f-w-400">S'Inscrire</h4>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Nom d'utilisateur">
+</div>
+<div class="input-group mb-3">
+  <input type="email" class="form-control" placeholder="Adresse Email">
+</div>
+<div class="input-group mb-4">
+  <input type="password" class="form-control" placeholder="Mot de passe">
+</div>
+<div class="custom-control custom-checkbox text-left mb-4 mt-2">
+  <input type="checkbox" class="custom-control-input" id="customCheck1">
+  <label for="customCheck1" class="custom-control-label">Envoyez-moi la <a href="javascript:"> Newsletter</a> quotidiennement.</label>
+</div>
+<button class="btn btn-primary btn-block mb-4">S'Inscrire</button>
+<div class="text-center">
+  <div class="saprator my-4"><span>OU</span></div>
+  <p class="mt-4">Vous avez déjà un compte ? <a [routerLink]="['/auth/signin']" class="f-w-400">Se Connecter</a></p>
+</div>

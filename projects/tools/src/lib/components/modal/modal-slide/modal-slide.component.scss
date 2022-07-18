@@ -1,0 +1,42 @@
+.q-view.modal-slide {
+  .feather {
+    display: none;
+    position: fixed;
+    top: 1.25rem;
+    right: 0;
+    width: 19px;
+    height: 19px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    @media (max-width: 380px) {
+      display: block;
+    }
+  }
+  .content {
+    padding-top: 0;
+    @media (max-width: 600px) {
+      width: 450px;
+    }
+    @media (max-width: 460px) {
+      width: 325px;
+    }
+    @media (max-width: 380px) {
+      width: 100%;
+    }
+  }
+  .modal-slide-header {
+    padding: 1.25rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.125);
+  }
+  .modal-slide-body {
+    height: calc(100vh - 122px);
+  }
+  .modal-slide-footer {
+    padding: .7rem 1.25rem;
+  }
+}
+

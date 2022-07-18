@@ -1,0 +1,11 @@
+<div class="q-view modal-slide" [ngClass]="{'active' : open}">
+  <div class="overlay" (click)="closeSlide()"></div>
+  <div class="content">
+    <span class="feather icon-x" (click)="closeSlide()"></span>
+    <ng-content select=".modal-slide-header"></ng-content>
+    <perfect-scrollbar [style.max-height]="'calc(100vh - 122px)'">
+      <ng-content select=".modal-slide-body"></ng-content>
+    </perfect-scrollbar>
+    <ng-content select=".modal-slide-footer"></ng-content>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="details">
+  <div class="details-item">
+    <h5>Libellé</h5>
+    <span>{{item.libelle}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Immatriculation véhicule</h5>
+    <span>{{item.vehicule.immatriculation}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Avant véhicule</h5>
+    <span>{{item.vehicule.avantVehicule}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Capacité véhicule</h5>
+    <span>{{item.vehicule.capacite}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Noms transporteur</h5>
+    <span>{{item.transporteur.civilite}}. {{item.transporteur.nom}} {{item.transporteur.prenoms}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Code transporteur</h5>
+    <span>{{item.transporteur.code}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Contact transporteur</h5>
+    <span>{{item.transporteur.contact}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Noms chauffeur</h5>
+    <span>{{item.chauffeur.civilite}}. {{item.chauffeur.nom}} {{item.chauffeur.prenoms}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Contact chauffeur</h5>
+    <span>{{item.chauffeur.contact}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Numero permission chauffeur</h5>
+    <span>{{item.chauffeur.numeroPermis}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Créé le</h5>
+    <span>{{item.created | date: 'dd/MM/yyyy'}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Modifié le</h5>
+    <span>{{item.updated | date: 'dd/MM/yyyy'}}</span>
+  </div>
+</div>

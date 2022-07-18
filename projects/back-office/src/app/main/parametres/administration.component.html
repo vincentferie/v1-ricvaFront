@@ -1,0 +1,61 @@
+<div class="page-body">
+  <div class="row">
+    <div class="col-md-12 col-xl-12">
+      <app-ricva-card cardTitle="Panneau d'administration" cardClass="datatable-list" [loadCard]="loading$ | async" (refresh)="refresh()">
+        <div class="card-block">
+          <!-- users start -->
+          <h5 class="lead m-t-0">Gestionnaire d'utilisateurs</h5>
+          <hr>
+          <div class="row">
+            <div class="col-md-6 col-xl-4">
+              <app-shadow-card link="/parametres/utilisateur/" title="UTILISATEURS" subTitle="GESTION DES UTILISATEURS" color="green" icon="icon-unlock" [content]="0"></app-shadow-card>
+            </div>
+            <!-- <div class="col-md-6 col-xl-4">
+              <app-shadow-card link="/administration/utilisateur/" title="UTILISATEURS" subTitle="GESTION DES UTILISATEURS" color="green" icon="icon-unlock" [content]="dashboardCount?.user"></app-shadow-card>
+            </div> -->
+            <!-- <div class="col-md-6 col-xl-4">
+              <app-shadow-card link="/administration/roles/" title="ROLES" subTitle="GESTION DES ROLES" color="blue" icon="icon-users" [content]="dashboardCount?.role"></app-shadow-card>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <app-shadow-card link="/administration/permissions/" title="PERMISSIONS" subTitle="GESTION DES PERMISSIONS" color="yellow" icon="icon-book" [content]="dashboardCount?.permission"></app-shadow-card>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <app-shadow-card link="/administration/sessions/" title="AUTHENTICATION SESSIONS" subTitle="AUTHENTICATION SESSIONS ACTIVES" color="red" icon="icon-book" [content]="dashboardCount?.oauth_session"></app-shadow-card>
+            </div> -->
+          </div>
+          <!-- users end -->
+          <!-- <br><br> -->
+          <!-- Meta data start -->
+          <!-- <div class="">
+            <h5 class="lead m-t-0">Meta-données (Gestion des données de base)</h5>
+            <hr>
+            <div class="row">
+              <div class="col-md-6 col-xl-4">
+                <app-shadow-card link="/administration/banques/" title="BANQUES" subTitle="GESTION DES BANQUES" color="green" icon="icon-command" [content]="dashboardCount?.bank"></app-shadow-card>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <app-shadow-card link="/administration/emballages/" title="EMBALLAGES" subTitle="GESTION DES EMBALLAGES" color="blue" icon="icon-package" [content]="dashboardCount?.packaging"></app-shadow-card>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <app-shadow-card link="/administration/types-emballage/" title="TYPES D'EMBALLAGES" subTitle="GESTION DES TYPES D'EMBALLAGES" color="yellow" icon="icon-package" [content]="dashboardCount?.packaging_type"></app-shadow-card>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <app-shadow-card link="/administration/types-de-reglement/" title="TYPES DE REGLEMENT" subTitle="GESTION DES TYPES DE REGLEMENT" color="red" icon="icon-package" [content]="dashboardCount?.payment_type"></app-shadow-card>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <app-shadow-card link="/administration/types-de-piece/" title="TYPES DE PIECE" subTitle="GESTION DES TYPES DE PIECE" color="green" icon="icon-package" [content]="dashboardCount?.piece_type"></app-shadow-card>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <app-shadow-card link="/administration/etapes/" title="ETAPES" subTitle="GESTION DES ETAPES" color="blue" icon="icon-package" [content]="dashboardCount?.step"></app-shadow-card>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <app-shadow-card link="/administration/cycles/" title="CYCLES" subTitle="GESTION DES CYCLES" color="yellow" icon="icon-package" [content]="dashboardCount?.cycle"></app-shadow-card>
+              </div>
+            </div>
+          </div> -->
+          <!-- Meta data end -->
+        </div>
+      </app-ricva-card>
+    </div>
+  </div>
+</div>

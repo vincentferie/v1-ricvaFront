@@ -1,0 +1,34 @@
+<form [formGroup]="createUpdateForm" class="editForm">
+  <div class="row">
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="montant" class="form-label">Montant</label>
+        <input type="number" class="form-control" id="montant" formControlName="montant" placeholder="Montant"
+          [ngClass]="{'is-invalid': !createUpdateControls.montant.valid && (createUpdateControls.montant.dirty || createUpdateControls.montant.touched)}">
+        <label *ngIf="!createUpdateControls.montant.valid && (createUpdateControls.montant.dirty || createUpdateControls.montant.touched)"
+          id="montant-error" class="error jquery-validation-error small form-text invalid-feedback">Le montant est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="membre" class="form-label">Membre</label>
+        <select class="form-control" id="membre" formControlName="membre"
+          [ngClass]="{'is-invalid': !createUpdateControls.membre.valid && (createUpdateControls.membre.dirty || createUpdateControls.membre.touched)}">
+          <option value>Selectionner membre...</option>
+          <option *ngFor="let item of membreList" [ngValue]="item">{{item.nom}} {{item.prenoms}}</option>
+        </select>
+        <label *ngIf="!createUpdateControls.membre.valid && (createUpdateControls.membre.dirty || createUpdateControls.membre.touched)"
+          id="membre-error" class="error jquery-validation-error small form-text invalid-feedback">Le membre est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="dateAdhesion" class="form-label">Date d'adhesion</label>
+        <input type="date" class="form-control" id="dateAdhesion" formControlName="dateAdhesion" placeholder="Date d'adhesion"
+          [ngClass]="{'is-invalid': !createUpdateControls.dateAdhesion.valid && (createUpdateControls.dateAdhesion.dirty || createUpdateControls.dateAdhesion.touched)}">
+        <label *ngIf="!createUpdateControls.dateAdhesion.valid && (createUpdateControls.dateAdhesion.dirty || createUpdateControls.dateAdhesion.touched)"
+          id="dateAdhesion-error" class="error jquery-validation-error small form-text invalid-feedback">La date d'adhesion est requise.</label>
+      </div>
+    </div>
+  </div>
+</form>

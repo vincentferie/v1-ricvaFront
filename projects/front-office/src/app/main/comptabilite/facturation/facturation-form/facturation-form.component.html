@@ -1,0 +1,34 @@
+<form [formGroup]="createUpdateForm" class="editForm">
+  <div class="row">
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="client" class="form-label">Client</label>
+        <select class="form-control" id="client" formControlName="client"
+          [ngClass]="{'is-invalid': !createUpdateControls.client.valid && (createUpdateControls.client.dirty || createUpdateControls.client.touched)}">
+          <option value>Selectionner client...</option>
+          <option *ngFor="let item of clientList" [ngValue]="item">{{item.nom}} {{item.prenoms}}</option>
+        </select>
+        <label *ngIf="!createUpdateControls.client.valid && (createUpdateControls.client.dirty || createUpdateControls.client.touched)"
+          id="client-error" class="error jquery-validation-error small form-text invalid-feedback">Le client est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="numero" class="form-label">Numero</label>
+        <input type="text" class="form-control" id="numero" formControlName="numero" placeholder="Numero"
+          [ngClass]="{'is-invalid': !createUpdateControls.numero.valid && (createUpdateControls.numero.dirty || createUpdateControls.numero.touched)}">
+        <label *ngIf="!createUpdateControls.numero.valid && (createUpdateControls.numero.dirty || createUpdateControls.numero.touched)"
+          id="numero-error" class="error jquery-validation-error small form-text invalid-feedback">Le numero est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" class="form-control" id="date" formControlName="date" placeholder="Date"
+          [ngClass]="{'is-invalid': !createUpdateControls.date.valid && (createUpdateControls.date.dirty || createUpdateControls.date.touched)}">
+        <label *ngIf="!createUpdateControls.date.valid && (createUpdateControls.date.dirty || createUpdateControls.date.touched)"
+          id="date-error" class="error jquery-validation-error small form-text invalid-feedback">La date est requise.</label>
+      </div>
+    </div>
+  </div>
+</form>

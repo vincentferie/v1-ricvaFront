@@ -1,0 +1,13 @@
+<form [formGroup]="createUpdateForm" class="editForm">
+  <div class="row rowForm">
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="libelle" class="form-label">Libellé</label>
+        <input type="text" class="form-control" id="libelle" formControlName="libelle" placeholder="libelle"
+          [ngClass]="{'is-invalid': !createUpdateControls.libelle.valid && (createUpdateControls.libelle.dirty || createUpdateControls.libelle.touched)}">
+        <label *ngIf="!createUpdateControls.libelle.valid && (createUpdateControls.libelle.dirty || createUpdateControls.libelle.touched)"
+          id="libelle-error" class="error jquery-validation-error small form-text invalid-feedback">Le libellé est requis.</label>
+      </div>
+    </div>
+  </div>
+</form>

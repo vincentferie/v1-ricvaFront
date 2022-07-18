@@ -1,0 +1,52 @@
+<form [formGroup]="createUpdateForm" class="editForm">
+  <div class="row">
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="nom" formControlName="nom" placeholder="Nom"
+          [ngClass]="{'is-invalid': !createUpdateControls.nom.valid && (createUpdateControls.nom.dirty || createUpdateControls.nom.touched)}">
+        <label *ngIf="!createUpdateControls.nom.valid && (createUpdateControls.nom.dirty || createUpdateControls.nom.touched)"
+          id="nom-error" class="error jquery-validation-error small form-text invalid-feedback">Le nom est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="prenoms" class="form-label">Prénoms</label>
+        <input type="text" class="form-control" id="prenoms" formControlName="prenoms" placeholder="Prénoms"
+          [ngClass]="{'is-invalid': !createUpdateControls.prenoms.valid && (createUpdateControls.prenoms.dirty || createUpdateControls.prenoms.touched)}">
+        <label *ngIf="!createUpdateControls.prenoms.valid && (createUpdateControls.prenoms.dirty || createUpdateControls.prenoms.touched)"
+          id="prenoms-error" class="error jquery-validation-error small form-text invalid-feedback">Le prénoms est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="email" class="form-label">Adresse email</label>
+        <input type="text" class="form-control" id="email" formControlName="email" placeholder="Adresse email"
+          [ngClass]="{'is-invalid': !createUpdateControls.email.valid && (createUpdateControls.email.dirty || createUpdateControls.email.touched)}">
+        <label *ngIf="!createUpdateControls.email.valid && (createUpdateControls.email.dirty || createUpdateControls.email.touched)"
+          id="email-error" class="error jquery-validation-error small form-text invalid-feedback">L'adresse email est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="contact" class="form-label">Contact</label>
+        <input type="number" class="form-control" id="contact" formControlName="contact" placeholder="Contact"
+          [ngClass]="{'is-invalid': !createUpdateControls.contact.valid && (createUpdateControls.contact.dirty || createUpdateControls.contact.touched)}">
+        <label *ngIf="!createUpdateControls.contact.valid && (createUpdateControls.contact.dirty || createUpdateControls.contact.touched)"
+          id="contact-error" class="error jquery-validation-error small form-text invalid-feedback">Le contact est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="ville" class="form-label">Ville</label>
+        <select class="form-control" id="ville" formControlName="ville"
+          [ngClass]="{'is-invalid': !createUpdateControls.ville.valid && (createUpdateControls.ville.dirty || createUpdateControls.ville.touched)}">
+          <option value>Selectionner ville...</option>
+          <option *ngFor="let item of villeList" [ngValue]="item">{{item.libelle}}</option>
+        </select>
+        <label *ngIf="!createUpdateControls.ville.valid && (createUpdateControls.ville.dirty || createUpdateControls.ville.touched)"
+          id="ville-error" class="error jquery-validation-error small form-text invalid-feedback">Le ville est requis.</label>
+      </div>
+    </div>
+  </div>
+</form>

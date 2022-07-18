@@ -1,0 +1,28 @@
+
+<app-card [cardClass]="loadCard ? 'card-load' : cardClass" [blockClass]="blockClass" [loadCard]="loadCard" [customHeader]="true">
+  <div class="app-card-header">
+    <h5>{{ cardTitle }}</h5>
+    <div class="card-header-right">
+      <div class="btn-group card-option dropdown" ngbDropdown>
+        <button type="button" class="btn dropdown-toggle btn-icon" ngbDropdownToggle>
+          <i class="feather icon-more-horizontal"></i>
+        </button>
+        <ul *ngIf="cardOption" class="list-unstyled card-option dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+          <li class="dropdown-item full-card" (click)="fullCardToggle('', true)">
+            <a href="javascript:"><span><i class="feather" [ngClass]="fullIcon"></i> {{fullIcon === 'icon-minimize' ? 'Rétablir' : 'Agrandir'}}</span></a>
+          </li>
+          <li class="dropdown-item minimize-card" (click)="collapsedCardToggle()">
+            <a href="javascript:"><span><i class="feather" [ngClass]="collapsedIcon"></i> {{collapsedIcon === 'icon-plus' ? 'Etendre' : 'Masquer'}} </span></a>
+          </li>
+          <li *ngIf="hasRefresh" class="dropdown-item reload-card" (click)="cardRefresh()">
+            <a href="javascript:"><span><i class="feather icon-refresh-cw"></i> Rafraichir</span></a>
+          </li>
+          <li *ngFor="let item of cardActions" (click)="item.action()" class="dropdown-item" [ngClass]="item.class">
+            <a href="javascript:"><span><i class="feather" [ngClass]="item.icon"></i> {{item.label}} </span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ng-content></ng-content>
+</app-card>

@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-ricva-card cardTitle="Stock lot" cardClass="datatable-list" [loadCard]="loading$ | async" (refresh)="refresh()">
+      <div class="dt-responsive table-responsive">
+        <table class="table table-striped row-border table-hover">
+          <thead>
+            <tr>
+              <th>Libellé</th>
+              <th>Stock théorique</th>
+              <th>Stock réel</th>
+              <th>Créer le</th>
+              <th>Modifier le</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of objectList$ | async">
+              <td>{{item.libelle}}</td>
+              <td>{{item.speculation.libelle}}</td>
+              <td>{{item.stockTheorique}}</td>
+              <td>{{item.stockReel}}</td>
+              <td>{{item.created | date: 'dd/MM/yyyy à HH:mm:ss'}}</td>
+              <td>
+                {{item.updated | date: 'dd/MM/yyyy à HH:mm:ss'}}
+                <app-button-actions [styleClass]="'overlay-edit'" [btnClass]="'btn-actions'" [actions]="actions" (executeAction)="executeAction($event, item)"></app-button-actions>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-ricva-card>
+  </div>
+</div>
+<app-modal-slide *ngIf="itemDetails" [open]="open" (close)="close()">
+  <div class="modal-slide-header bg-primary">
+    <h5 *ngIf="itemDetails" class="mb-0">Détails stock lot</h5>
+  </div>
+  <div class="modal-slide-body">
+    <div class="row">
+      <div class="col-md-12">
+        <app-stock-lot-details *ngIf="itemDetails" [(item)]="itemDetails"></app-stock-lot-details>
+      </div>
+    </div>
+  </div>
+</app-modal-slide>
+

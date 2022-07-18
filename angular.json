@@ -1,0 +1,532 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "auth-front-office": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/auth-front-office",
+      "sourceRoot": "projects/auth-front-office/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/auth-front-office",
+            "index": "projects/auth-front-office/src/index.html",
+            "main": "projects/auth-front-office/src/main.ts",
+            "polyfills": "projects/auth-front-office/src/polyfills.ts",
+            "tsConfig": "projects/auth-front-office/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/auth-front-office/src/favicon.ico",
+              "projects/auth-front-office/src/assets",
+              {
+                "glob": "**/*",
+                "input": "assets/",
+                "output": "assets/"
+              }
+            ],
+            "styles": [
+              "projects/auth-front-office/src/styles.scss",
+              "projects/auth-front-office/src/scss/style.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "scss"
+              ]
+            },
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/auth-front-office/src/environments/environment.ts",
+                  "with": "projects/auth-front-office/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "auth-front-office:build",
+            "port": 4201
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "auth-front-office:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "auth-front-office:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/auth-front-office/src/test.ts",
+            "polyfills": "projects/auth-front-office/src/polyfills.ts",
+            "tsConfig": "projects/auth-front-office/tsconfig.spec.json",
+            "karmaConfig": "projects/auth-front-office/karma.conf.js",
+            "assets": [
+              "projects/auth-front-office/src/favicon.ico",
+              "projects/auth-front-office/src/assets",
+              {
+                "glob": "**/*",
+                "input": "assets/",
+                "output": "assets/"
+              }
+            ],
+            "styles": [
+              "projects/auth-front-office/src/styles.scss",
+              "projects/auth-front-office/src/scss/style.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "scss"
+              ]
+            },
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/auth-front-office/tsconfig.app.json",
+              "projects/auth-front-office/tsconfig.spec.json",
+              "projects/auth-front-office/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/auth-front-office/e2e/protractor.conf.js",
+            "devServerTarget": "auth-front-office:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "auth-front-office:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "front-office": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/front-office",
+      "sourceRoot": "projects/front-office/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/front-office",
+            "index": "projects/front-office/src/index.html",
+            "main": "projects/front-office/src/main.ts",
+            "polyfills": "projects/front-office/src/polyfills.ts",
+            "tsConfig": "projects/front-office/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/front-office/src/favicon.ico",
+              "projects/front-office/src/assets",
+              {
+                "glob": "**/*",
+                "input": "assets/",
+                "output": "assets/"
+              }
+            ],
+            "styles": [
+              "projects/front-office/src/styles.scss",
+              "projects/front-office/src/scss/style.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "scss"
+              ]
+            },
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/front-office/src/environments/environment.ts",
+                  "with": "projects/front-office/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "front-office:build",
+            "port": 4200
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "front-office:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "front-office:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/front-office/src/test.ts",
+            "polyfills": "projects/front-office/src/polyfills.ts",
+            "tsConfig": "projects/front-office/tsconfig.spec.json",
+            "karmaConfig": "projects/front-office/karma.conf.js",
+            "assets": [
+              "projects/front-office/src/favicon.ico",
+              "projects/front-office/src/assets",
+              {
+                "glob": "**/*",
+                "input": "assets/",
+                "output": "assets/"
+              }
+            ],
+            "styles": [
+              "projects/front-office/src/styles.scss",
+              "projects/front-office/src/scss/style.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "scss"
+              ]
+            },
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/front-office/tsconfig.app.json",
+              "projects/front-office/tsconfig.spec.json",
+              "projects/front-office/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/front-office/e2e/protractor.conf.js",
+            "devServerTarget": "front-office:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "front-office:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "tools": {
+      "projectType": "library",
+      "root": "projects/tools",
+      "sourceRoot": "projects/tools/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/tools/tsconfig.lib.json",
+            "project": "projects/tools/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/tools/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tools/src/test.ts",
+            "tsConfig": "projects/tools/tsconfig.spec.json",
+            "karmaConfig": "projects/tools/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/tools/tsconfig.lib.json",
+              "projects/tools/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "back-office": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/back-office",
+      "sourceRoot": "projects/back-office/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/back-office",
+            "index": "projects/back-office/src/index.html",
+            "main": "projects/back-office/src/main.ts",
+            "polyfills": "projects/back-office/src/polyfills.ts",
+            "tsConfig": "projects/back-office/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/back-office/src/favicon.ico",
+              "projects/back-office/src/assets",
+              {
+                "glob": "**/*",
+                "input": "assets/",
+                "output": "assets/"
+              }
+            ],
+            "styles": [
+              "projects/back-office/src/styles.scss",
+              "projects/back-office/src/scss/style.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "scss"
+              ]
+            },
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/back-office/src/environments/environment.ts",
+                  "with": "projects/back-office/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "back-office:build",
+            "port": 4202
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "back-office:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "back-office:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/back-office/src/test.ts",
+            "polyfills": "projects/back-office/src/polyfills.ts",
+            "tsConfig": "projects/back-office/tsconfig.spec.json",
+            "karmaConfig": "projects/back-office/karma.conf.js",
+            "assets": [
+              "projects/back-office/src/favicon.ico",
+              "projects/back-office/src/assets",
+              {
+                "glob": "**/*",
+                "input": "assets/",
+                "output": "assets/"
+              }
+            ],
+            "styles": [
+              "projects/back-office/src/styles.scss",
+              "projects/back-office/src/scss/style.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "scss"
+              ]
+            },
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/back-office/tsconfig.app.json",
+              "projects/back-office/tsconfig.spec.json",
+              "projects/back-office/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/back-office/e2e/protractor.conf.js",
+            "devServerTarget": "back-office:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "back-office:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "vendors": {
+      "projectType": "library",
+      "root": "projects/vendors",
+      "sourceRoot": "projects/vendors/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/vendors/tsconfig.lib.json",
+            "project": "projects/vendors/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vendors/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/vendors/src/test.ts",
+            "tsConfig": "projects/vendors/tsconfig.spec.json",
+            "karmaConfig": "projects/vendors/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/vendors/tsconfig.lib.json",
+              "projects/vendors/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "auth-front-office"
+}

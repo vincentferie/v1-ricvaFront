@@ -1,0 +1,19 @@
+<div class="navbar pcoded-header navbar-expand-lg navbar-light header-blue">
+  <div class="m-header">
+    <a [routerLink]="['/dashboard/analytics']" class="b-brand">
+      <img id="main-logo" src="assets/images/logo/rivca.png" alt="" class="logo">
+      <img src="assets/images/logo/rivca-icon.png" alt="" class="logo-thumb">
+    </a>
+  </div>
+  <div class="collapse navbar-collapse">
+    <app-nav-left class="mr-auto"></app-nav-left>
+    <app-nav-right class="ml-auto"></app-nav-right>
+  </div>
+</div>
+<div class="pcoded-navbar theme-horizontal menu-light display-none"></div>
+<div class="pcoded-main-container">
+  <div class="pcoded-content container">
+    <app-breadcrumb></app-breadcrumb>
+    <router-outlet></router-outlet>
+  </div>
+</div>

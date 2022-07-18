@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-ricva-card cardTitle="Ajouter membre" [cardActions]="cardActions" [hasRefresh]="false">
+      <app-membre-form inputColClass="col-md-6" [(item)]="item"></app-membre-form>
+      <div class="form-group text-center p-t-40">
+        <app-button-form [loading]="loading$ | async" [disabledSave]="!item || (loading$ | async)" [disabledReset]="loading$ | async"
+          titleLoading="Chargement..." titleSave="Enregistrer" titleReset="Réinitialiser" resetClass="m-l-20"
+          saveIconClass="fa fa-edit" resetIconClass="fa fa-times" (save)="save()" (reset)="reset()"></app-button-form>
+      </div>
+    </app-ricva-card>
+  </div>
+</div>

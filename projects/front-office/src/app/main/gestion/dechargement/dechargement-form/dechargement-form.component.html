@@ -1,0 +1,289 @@
+<form [formGroup]="createUpdateForm" class="editForm pt-0">
+  <div class="row">
+    <ng-container *ngIf="sections.includes('origine')">
+      <div class="col-sm-12">
+        <h5>Origine du produit</h5>
+        <hr>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="numeroDechargement" class="form-label">Numero de déchargement</label>
+          <input type="number" class="form-control" id="numeroDechargement" formControlName="numeroDechargement" placeholder="Numero déchargement"
+            [ngClass]="{'is-invalid': !createUpdateControls.numeroDechargement.valid && (createUpdateControls.numeroDechargement.dirty || createUpdateControls.numeroDechargement.touched)}">
+          <label *ngIf="!createUpdateControls.numeroDechargement.valid && (createUpdateControls.numeroDechargement.dirty || createUpdateControls.numeroDechargement.touched)"
+            id="numeroDechargement-error" class="error jquery-validation-error small form-text invalid-feedback">Le numero déchargement est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="dateChargement" class="form-label">Date de chargement</label>
+          <input type="date" class="form-control" id="dateChargement" formControlName="dateChargement" placeholder="Date de chargement"
+            [ngClass]="{'is-invalid': !createUpdateControls.dateChargement.valid && (createUpdateControls.dateChargement.dirty || createUpdateControls.dateChargement.touched)}">
+          <label *ngIf="!createUpdateControls.dateChargement.valid && (createUpdateControls.dateChargement.dirty || createUpdateControls.dateChargement.touched)"
+            id="dateChargement-error" class="error jquery-validation-error small form-text invalid-feedback">La date de chargement est requise.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="region" class="form-label">Région</label>
+          <select class="form-control" id="region" formControlName="region"
+            [ngClass]="{'is-invalid': !createUpdateControls.region.valid && (createUpdateControls.region.dirty || createUpdateControls.region.touched)}">
+            <option value>Selectionner région...</option>
+            <option *ngFor="let item of regionList" [ngValue]="item">{{item.libelle}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.region.valid && (createUpdateControls.region.dirty || createUpdateControls.region.touched)"
+            id="region-error" class="error jquery-validation-error small form-text invalid-feedback">La région est requise.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="departement" class="form-label">Département</label>
+          <select class="form-control" id="departement" formControlName="departement"
+            [ngClass]="{'is-invalid': !createUpdateControls.departement.valid && (createUpdateControls.departement.dirty || createUpdateControls.departement.touched)}">
+            <option value>Selectionner département...</option>
+            <option *ngFor="let item of departementList" [ngValue]="item">{{item.libelle}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.departement.valid && (createUpdateControls.departement.dirty || createUpdateControls.departement.touched)"
+            id="departement-error" class="error jquery-validation-error small form-text invalid-feedback">Le département est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="sousPrefecture" class="form-label">Sous préfecture</label>
+          <select class="form-control" id="sousPrefecture" formControlName="sousPrefecture"
+            [ngClass]="{'is-invalid': !createUpdateControls.sousPrefecture.valid && (createUpdateControls.sousPrefecture.dirty || createUpdateControls.sousPrefecture.touched)}">
+            <option value>Selectionner sous préfecture...</option>
+            <option *ngFor="let item of sousPrefectureList" [ngValue]="item">{{item.libelle}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.sousPrefecture.valid && (createUpdateControls.sousPrefecture.dirty || createUpdateControls.sousPrefecture.touched)"
+            id="sousPrefecture-error" class="error jquery-validation-error small form-text invalid-feedback">La sous préfecture est requise.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="village" class="form-label">Village</label>
+          <select class="form-control" id="village" formControlName="village"
+            [ngClass]="{'is-invalid': !createUpdateControls.village.valid && (createUpdateControls.village.dirty || createUpdateControls.village.touched)}">
+            <option value>Selectionner village...</option>
+            <option *ngFor="let item of villageList" [ngValue]="item">{{item.libelle}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.village.valid && (createUpdateControls.village.dirty || createUpdateControls.village.touched)"
+            id="village-error" class="error jquery-validation-error small form-text invalid-feedback">Le village est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="ville" class="form-label">Ville</label>
+          <select class="form-control" id="ville" formControlName="ville"
+            [ngClass]="{'is-invalid': !createUpdateControls.ville.valid && (createUpdateControls.ville.dirty || createUpdateControls.ville.touched)}">
+            <option value>Selectionner ville...</option>
+            <option *ngFor="let item of villeList" [ngValue]="item">{{item.libelle}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.ville.valid && (createUpdateControls.ville.dirty || createUpdateControls.ville.touched)"
+            id="ville-error" class="error jquery-validation-error small form-text invalid-feedback">La ville est requise.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="site" class="form-label">Site</label>
+          <select class="form-control" id="site" formControlName="site"
+            [ngClass]="{'is-invalid': !createUpdateControls.site.valid && (createUpdateControls.site.dirty || createUpdateControls.site.touched)}">
+            <option value>Selectionner site...</option>
+            <option *ngFor="let item of siteList" [ngValue]="item">{{item.libelle}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.site.valid && (createUpdateControls.site.dirty || createUpdateControls.site.touched)"
+            id="site-error" class="error jquery-validation-error small form-text invalid-feedback">Le site est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="exportateur" class="form-label">Exportateur</label>
+          <select class="form-control" id="exportateur" formControlName="exportateur"
+            [ngClass]="{'is-invalid': !createUpdateControls.exportateur.valid && (createUpdateControls.exportateur.dirty || createUpdateControls.exportateur.touched)}">
+            <option value>Selectionner exportateur...</option>
+            <option *ngFor="let item of exportateurList" [ngValue]="item">{{item.nom}} {{item.prenoms}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.exportateur.valid && (createUpdateControls.exportateur.dirty || createUpdateControls.exportateur.touched)"
+            id="exportateur-error" class="error jquery-validation-error small form-text invalid-feedback">L'exportateur est requis.</label>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="sections.includes('acheteur')">
+      <div class="col-sm-12">
+        <h5>Informations sur l'acheteur</h5>
+        <hr>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="nomAcheteur" class="form-label">Nom acheteur</label>
+          <input type="text" class="form-control" id="nomAcheteur" formControlName="nomAcheteur" placeholder="Nom acheteur"
+            [ngClass]="{'is-invalid': !createUpdateControls.nomAcheteur.valid && (createUpdateControls.nomAcheteur.dirty || createUpdateControls.nomAcheteur.touched)}">
+          <label *ngIf="!createUpdateControls.nomAcheteur.valid && (createUpdateControls.nomAcheteur.dirty || createUpdateControls.nomAcheteur.touched)"
+            id="nomAcheteur-error" class="error jquery-validation-error small form-text invalid-feedback">Le nom acheteur est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="contactAcheteur" class="form-label">Contact acheteur</label>
+          <input type="number" class="form-control" id="contactAcheteur" formControlName="contactAcheteur" placeholder="Contact acheteur"
+            [ngClass]="{'is-invalid': !createUpdateControls.contactAcheteur.valid && (createUpdateControls.contactAcheteur.dirty || createUpdateControls.contactAcheteur.touched)}">
+          <label *ngIf="!createUpdateControls.contactAcheteur.valid && (createUpdateControls.contactAcheteur.dirty || createUpdateControls.contactAcheteur.touched)"
+            id="contactAcheteur-error" class="error jquery-validation-error small form-text invalid-feedback">Le contact acheteur est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="magasin" class="form-label">Magasin</label>
+          <select class="form-control" id="magasin" formControlName="magasin"
+            [ngClass]="{'is-invalid': !createUpdateControls.magasin.valid && (createUpdateControls.magasin.dirty || createUpdateControls.magasin.touched)}">
+            <option value>Selectionner magasin...</option>
+            <option *ngFor="let item of magasinList" [ngValue]="item">{{item.libelle}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.magasin.valid && (createUpdateControls.magasin.dirty || createUpdateControls.magasin.touched)"
+            id="magasin-error" class="error jquery-validation-error small form-text invalid-feedback">Le magasin est requis.</label>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="sections.includes('transport')">
+      <div class="col-sm-12">
+        <h5>Informations sur le transport du produit</h5>
+        <hr>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="thDepart" class="form-label">TH départ</label>
+          <input type="text" class="form-control" id="thDepart" formControlName="thDepart" placeholder="TH départ"
+            [ngClass]="{'is-invalid': !createUpdateControls.thDepart.valid && (createUpdateControls.thDepart.dirty || createUpdateControls.thDepart.touched)}">
+          <label *ngIf="!createUpdateControls.thDepart.valid && (createUpdateControls.thDepart.dirty || createUpdateControls.thDepart.touched)"
+            id="thDepart-error" class="error jquery-validation-error small form-text invalid-feedback">Le TH départ est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="nombreSacTonnage" class="form-label">Nombre de sacs tonnage</label>
+          <input type="number" class="form-control" id="nombreSacTonnage" formControlName="nombreSacTonnage" placeholder="Nombre de sacs tonnage"
+            [ngClass]="{'is-invalid': !createUpdateControls.nombreSacTonnage.valid && (createUpdateControls.nombreSacTonnage.dirty || createUpdateControls.nombreSacTonnage.touched)}">
+          <label *ngIf="!createUpdateControls.nombreSacTonnage.valid && (createUpdateControls.nombreSacTonnage.dirty || createUpdateControls.nombreSacTonnage.touched)"
+            id="nombreSacT©-error" class="error jquery-validation-error small form-text invalid-feedback">Le nombre de sacs tonnage est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="transporteur" class="form-label">Transporteur</label>
+          <select class="form-control" id="transporteur" formControlName="transporteur"
+            [ngClass]="{'is-invalid': !createUpdateControls.transporteur.valid && (createUpdateControls.transporteur.dirty || createUpdateControls.transporteur.touched)}">
+            <option value>Selectionner transporteur...</option>
+            <option *ngFor="let item of transporteurList" [ngValue]="item">{{item.nom}} {{item.prenoms}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.transporteur.valid && (createUpdateControls.transporteur.dirty || createUpdateControls.transporteur.touched)"
+            id="transporteur-error" class="error jquery-validation-error small form-text invalid-feedback">Le transporteur est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="chauffeur" class="form-label">Chauffeur</label>
+          <select class="form-control" id="chauffeur" formControlName="chauffeur"
+            [ngClass]="{'is-invalid': !createUpdateControls.chauffeur.valid && (createUpdateControls.chauffeur.dirty || createUpdateControls.chauffeur.touched)}">
+            <option value>Selectionner chauffeur...</option>
+            <option *ngFor="let item of chauffeurList" [ngValue]="item">{{item.nom}} {{item.prenoms}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.chauffeur.valid && (createUpdateControls.chauffeur.dirty || createUpdateControls.chauffeur.touched)"
+            id="chauffeur-error" class="error jquery-validation-error small form-text invalid-feedback">Le chauffeur est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="transport" class="form-label">Transport</label>
+          <select class="form-control" id="transport" formControlName="transport"
+            [ngClass]="{'is-invalid': !createUpdateControls.transport.valid && (createUpdateControls.transport.dirty || createUpdateControls.transport.touched)}">
+            <option value>Selectionner transport...</option>
+            <option *ngFor="let item of transportList" [ngValue]="item">{{item.libelle}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.transport.valid && (createUpdateControls.transport.dirty || createUpdateControls.transport.touched)"
+            id="transport-error" class="error jquery-validation-error small form-text invalid-feedback">Le transport est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="vehicule" class="form-label">Véhicule</label>
+          <select class="form-control" id="vehicule" formControlName="vehicule"
+            [ngClass]="{'is-invalid': !createUpdateControls.vehicule.valid && (createUpdateControls.vehicule.dirty || createUpdateControls.vehicule.touched)}">
+            <option value>Selectionner véhicule...</option>
+            <option *ngFor="let item of vehiculeList" [ngValue]="item">{{item.immatriculation}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.vehicule.valid && (createUpdateControls.vehicule.dirty || createUpdateControls.vehicule.touched)"
+            id="vehicule-error" class="error jquery-validation-error small form-text invalid-feedback">Le véhicule est requis.</label>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="sections.includes('destination')">
+      <div class="col-sm-12">
+        <h5>Destination du produit</h5>
+        <hr>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="dateDechargement" class="form-label">Date de déchargement</label>
+          <input type="date" class="form-control" id="dateDechargement" formControlName="dateDechargement" placeholder="Date de déchargement"
+            [ngClass]="{'is-invalid': !createUpdateControls.dateDechargement.valid && (createUpdateControls.dateDechargement.dirty || createUpdateControls.dateDechargement.touched)}">
+          <label *ngIf="!createUpdateControls.dateDechargement.valid && (createUpdateControls.dateDechargement.dirty || createUpdateControls.dateDechargement.touched)"
+            id="dateDechargement-error" class="error jquery-validation-error small form-text invalid-feedback">La date de déchargement est requise.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="heureDechargement" class="form-label">Heure de déchargement</label>
+          <input type="time" class="form-control" id="heureDechargement" formControlName="heureDechargement" placeholder="Heure de déchargement"
+            [ngClass]="{'is-invalid': !createUpdateControls.heureDechargement.valid && (createUpdateControls.heureDechargement.dirty || createUpdateControls.heureDechargement.touched)}">
+          <label *ngIf="!createUpdateControls.heureDechargement.valid && (createUpdateControls.heureDechargement.dirty || createUpdateControls.heureDechargement.touched)"
+            id="heureDechargement-error" class="error jquery-validation-error small form-text invalid-feedback">L'heure de déchargement est requise.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="zoneDechargement" class="form-label">Zone de déchargement</label>
+          <select class="form-control" id="zoneDechargement" formControlName="zoneDechargement"
+            [ngClass]="{'is-invalid': !createUpdateControls.zoneDechargement.valid && (createUpdateControls.zoneDechargement.dirty || createUpdateControls.zoneDechargement.touched)}">
+            <option value>Selectionner zone de déchargement...</option>
+            <option *ngFor="let item of zoneDechargementList" [ngValue]="item">{{item.libelle}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.zoneDechargement.valid && (createUpdateControls.zoneDechargement.dirty || createUpdateControls.zoneDechargement.touched)"
+            id="zoneDechargement-error" class="error jquery-validation-error small form-text invalid-feedback">La zone de déchargement est requise.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="pontBascule" class="form-label">Pont bascule</label>
+          <select class="form-control" id="pontBascule" formControlName="pontBascule"
+            [ngClass]="{'is-invalid': !createUpdateControls.pontBascule.valid && (createUpdateControls.pontBascule.dirty || createUpdateControls.pontBascule.touched)}">
+            <option value>Selectionner pont bascule...</option>
+            <option *ngFor="let item of pontBasculeList" [ngValue]="item">{{item.libelle}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.pontBascule.valid && (createUpdateControls.pontBascule.dirty || createUpdateControls.pontBascule.touched)"
+            id="pontBascule-error" class="error jquery-validation-error small form-text invalid-feedback">Le pont bascule est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="stockProduit" class="form-label">Stock produit</label>
+          <select class="form-control" id="stockProduit" formControlName="stockProduit"
+            [ngClass]="{'is-invalid': !createUpdateControls.stockProduit.valid && (createUpdateControls.stockProduit.dirty || createUpdateControls.stockProduit.touched)}">
+            <option value>Selectionner stock produit...</option>
+            <option *ngFor="let item of stockProduitList" [ngValue]="item">{{item.libelle}}</option>
+          </select>
+          <label *ngIf="!createUpdateControls.stockProduit.valid && (createUpdateControls.stockProduit.dirty || createUpdateControls.stockProduit.touched)"
+            id="stockProduit-error" class="error jquery-validation-error small form-text invalid-feedback">Le stock produit est requis.</label>
+        </div>
+      </div>
+      <div [ngClass]="inputColClass">
+        <div class="form-group">
+          <label for="nomControlleurTh" class="form-label">Nom controlleur TH</label>
+          <input type="text" class="form-control" id="nomControlleurTh" formControlName="nomControlleurTh" placeholder="Nom controlleur TH"
+            [ngClass]="{'is-invalid': !createUpdateControls.nomControlleurTh.valid && (createUpdateControls.nomControlleurTh.dirty || createUpdateControls.nomControlleurTh.touched)}">
+          <label *ngIf="!createUpdateControls.nomControlleurTh.valid && (createUpdateControls.nomControlleurTh.dirty || createUpdateControls.nomControlleurTh.touched)"
+            id="nomControlleurTh-error" class="error jquery-validation-error small form-text invalid-feedback">Le nom controlleur TH est requis.</label>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</form>

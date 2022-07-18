@@ -1,0 +1,866 @@
+.feathericon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  &.icon-activity {
+    background-image: url("assets/feathericons/activity.svg");
+  }
+  &.icon-airplay {
+    background-image: url("assets/feathericons/airplay.svg");
+  }
+  &.icon-alert-circle {
+    background-image: url("assets/feathericons/alert-circle.svg");
+  }
+  &.icon-alert-octagon {
+    background-image: url("assets/feathericons/alert-octagon.svg");
+  }
+  &.icon-alert-triangle {
+    background-image: url("assets/feathericons/alert-triangle.svg");
+  }
+  &.icon-align-center {
+    background-image: url("assets/feathericons/align-center.svg");
+  }
+  &.icon-align-justify {
+    background-image: url("assets/feathericons/align-justify.svg");
+  }
+  &.icon-align-left {
+    background-image: url("assets/feathericons/align-left.svg");
+  }
+  &.icon-align-right {
+    background-image: url("assets/feathericons/align-right.svg");
+  }
+  &.icon-anchor {
+    background-image: url("assets/feathericons/anchor.svg");
+  }
+  &.icon-aperture {
+    background-image: url("assets/feathericons/aperture.svg");
+  }
+  &.icon-archive {
+    background-image: url("assets/feathericons/archive.svg");
+  }
+  &.icon-arrow-down-circle {
+    background-image: url("assets/feathericons/arrow-down-circle.svg");
+  }
+  &.icon-arrow-down-left {
+    background-image: url("assets/feathericons/arrow-down-left.svg");
+  }
+  &.icon-arrow-down-right {
+    background-image: url("assets/feathericons/arrow-down-right.svg");
+  }
+  &.icon-arrow-down {
+    background-image: url("assets/feathericons/arrow-down.svg");
+  }
+  &.icon-arrow-left-circle {
+    background-image: url("assets/feathericons/arrow-left-circle.svg");
+  }
+  &.icon-arrow-left {
+    background-image: url("assets/feathericons/arrow-left.svg");
+  }
+  &.icon-arrow-right-circle {
+    background-image: url("assets/feathericons/arrow-right-circle.svg");
+  }
+  &.icon-arrow-right {
+    background-image: url("assets/feathericons/arrow-right.svg");
+  }
+  &.icon-arrow-up-circle {
+    background-image: url("assets/feathericons/arrow-up-circle.svg");
+  }
+  &.icon-arrow-up-left {
+    background-image: url("assets/feathericons/arrow-up-left.svg");
+  }
+  &.icon-arrow-up-right {
+    background-image: url("assets/feathericons/arrow-up-right.svg");
+  }
+  &.icon-arrow-up {
+    background-image: url("assets/feathericons/arrow-up.svg");
+  }
+  &.icon-at-sign {
+    background-image: url("assets/feathericons/at-sign.svg");
+  }
+  &.icon-award {
+    background-image: url("assets/feathericons/award.svg");
+  }
+  &.icon-bar-chart-2 {
+    background-image: url("assets/feathericons/bar-chart-2.svg");
+  }
+  &.icon-bar-chart {
+    background-image: url("assets/feathericons/bar-chart.svg");
+  }
+  &.icon-battery-charging {
+    background-image: url("assets/feathericons/battery-charging.svg");
+  }
+  &.icon-battery {
+    background-image: url("assets/feathericons/battery.svg");
+  }
+  &.icon-bell-off {
+    background-image: url("assets/feathericons/bell-off.svg");
+  }
+  &.icon-bell {
+    background-image: url("assets/feathericons/bell.svg");
+  }
+  &.icon-bluetooth {
+    background-image: url("assets/feathericons/bluetooth.svg");
+  }
+  &.icon-bold {
+    background-image: url("assets/feathericons/bold.svg");
+  }
+  &.icon-book-open {
+    background-image: url("assets/feathericons/book-open.svg");
+  }
+  &.icon-book {
+    background-image: url("assets/feathericons/book.svg");
+  }
+  &.icon-bookmark {
+    background-image: url("assets/feathericons/bookmark.svg");
+  }
+  &.icon-box {
+    background-image: url("assets/feathericons/box.svg");
+  }
+  &.icon-briefcase {
+    background-image: url("assets/feathericons/briefcase.svg");
+  }
+  &.icon-calendar {
+    background-image: url("assets/feathericons/calendar.svg");
+  }
+  &.icon-camera-off {
+    background-image: url("assets/feathericons/camera-off.svg");
+  }
+  &.icon-camera {
+    background-image: url("assets/feathericons/camera.svg");
+  }
+  &.icon-cast {
+    background-image: url("assets/feathericons/cast.svg");
+  }
+  &.icon-check-circle {
+    background-image: url("assets/feathericons/check-circle.svg");
+  }
+  &.icon-check-square {
+    background-image: url("assets/feathericons/check-square.svg");
+  }
+  &.icon-check {
+    background-image: url("assets/feathericons/check.svg");
+  }
+  &.icon-chevron-down {
+    background-image: url("assets/feathericons/chevron-down.svg");
+  }
+  &.icon-chevron-left {
+    background-image: url("assets/feathericons/chevron-left.svg");
+  }
+  &.icon-chevron-right {
+    background-image: url("assets/feathericons/chevron-right.svg");
+  }
+  &.icon-chevron-up {
+    background-image: url("assets/feathericons/chevron-up.svg");
+  }
+  &.icon-chevrons-down {
+    background-image: url("assets/feathericons/chevrons-down.svg");
+  }
+  &.icon-chevrons-left {
+    background-image: url("assets/feathericons/chevrons-left.svg");
+  }
+  &.icon-chevrons-right {
+    background-image: url("assets/feathericons/chevrons-right.svg");
+  }
+  &.icon-chevrons-up {
+    background-image: url("assets/feathericons/chevrons-up.svg");
+  }
+  &.icon-chrome {
+    background-image: url("assets/feathericons/chrome.svg");
+  }
+  &.icon-circle {
+    background-image: url("assets/feathericons/circle.svg");
+  }
+  &.icon-clipboard {
+    background-image: url("assets/feathericons/clipboard.svg");
+  }
+  &.icon-clock {
+    background-image: url("assets/feathericons/clock.svg");
+  }
+  &.icon-cloud-drizzle {
+    background-image: url("assets/feathericons/cloud-drizzle.svg");
+  }
+  &.icon-cloud-lightning {
+    background-image: url("assets/feathericons/cloud-lightning.svg");
+  }
+  &.icon-cloud-off {
+    background-image: url("assets/feathericons/cloud-off.svg");
+  }
+  &.icon-cloud-rain {
+    background-image: url("assets/feathericons/cloud-rain.svg");
+  }
+  &.icon-cloud-snow {
+    background-image: url("assets/feathericons/cloud-snow.svg");
+  }
+  &.icon-cloud {
+    background-image: url("assets/feathericons/cloud.svg");
+  }
+  &.icon-code {
+    background-image: url("assets/feathericons/code.svg");
+  }
+  &.icon-codepen {
+    background-image: url("assets/feathericons/codepen.svg");
+  }
+  &.icon-codesandbox {
+    background-image: url("assets/feathericons/codesandbox.svg");
+  }
+  &.icon-coffee {
+    background-image: url("assets/feathericons/coffee.svg");
+  }
+  &.icon-columns {
+    background-image: url("assets/feathericons/columns.svg");
+  }
+  &.icon-command {
+    background-image: url("assets/feathericons/command.svg");
+  }
+  &.icon-compass {
+    background-image: url("assets/feathericons/compass.svg");
+  }
+  &.icon-copy {
+    background-image: url("assets/feathericons/copy.svg");
+  }
+  &.icon-corner-down-left {
+    background-image: url("assets/feathericons/corner-down-left.svg");
+  }
+  &.icon-corner-down-right {
+    background-image: url("assets/feathericons/corner-down-right.svg");
+  }
+  &.icon-corner-left-down {
+    background-image: url("assets/feathericons/corner-left-down.svg");
+  }
+  &.icon-corner-left-up {
+    background-image: url("assets/feathericons/corner-left-up.svg");
+  }
+  &.icon-corner-right-down {
+    background-image: url("assets/feathericons/corner-right-down.svg");
+  }
+  &.icon-corner-right-up {
+    background-image: url("assets/feathericons/corner-right-up.svg");
+  }
+  &.icon-corner-up-left {
+    background-image: url("assets/feathericons/corner-up-left.svg");
+  }
+  &.icon-corner-up-right {
+    background-image: url("assets/feathericons/corner-up-right.svg");
+  }
+  &.icon-cpu {
+    background-image: url("assets/feathericons/cpu.svg");
+  }
+  &.icon-credit-card {
+    background-image: url("assets/feathericons/credit-card.svg");
+  }
+  &.icon-crop {
+    background-image: url("assets/feathericons/crop.svg");
+  }
+  &.icon-crosshair {
+    background-image: url("assets/feathericons/crosshair.svg");
+  }
+  &.icon-database {
+    background-image: url("assets/feathericons/database.svg");
+  }
+  &.icon-delete {
+    background-image: url("assets/feathericons/delete.svg");
+  }
+  &.icon-disc {
+    background-image: url("assets/feathericons/disc.svg");
+  }
+  &.icon-divide-circle {
+    background-image: url("assets/feathericons/divide-circle.svg");
+  }
+  &.icon-divide-square {
+    background-image: url("assets/feathericons/divide-square.svg");
+  }
+  &.icon-divide {
+    background-image: url("assets/feathericons/divide.svg");
+  }
+  &.icon-dollar-sign {
+    background-image: url("assets/feathericons/dollar-sign.svg");
+  }
+  &.icon-download-cloud {
+    background-image: url("assets/feathericons/download-cloud.svg");
+  }
+  &.icon-download {
+    background-image: url("assets/feathericons/download.svg");
+  }
+  &.icon-dribbble {
+    background-image: url("assets/feathericons/dribbble.svg");
+  }
+  &.icon-droplet {
+    background-image: url("assets/feathericons/droplet.svg");
+  }
+  &.icon-edit-2 {
+    background-image: url("assets/feathericons/edit-2.svg");
+  }
+  &.icon-edit-3 {
+    background-image: url("assets/feathericons/edit-3.svg");
+  }
+  &.icon-edit {
+    background-image: url("assets/feathericons/edit.svg");
+  }
+  &.icon-external-link {
+    background-image: url("assets/feathericons/external-link.svg");
+  }
+  &.icon-eye-off {
+    background-image: url("assets/feathericons/eye-off.svg");
+  }
+  &.icon-eye {
+    background-image: url("assets/feathericons/eye.svg");
+  }
+  &.icon-facebook {
+    background-image: url("assets/feathericons/facebook.svg");
+  }
+  &.icon-fast-forward {
+    background-image: url("assets/feathericons/fast-forward.svg");
+  }
+  &.icon-feather {
+    background-image: url("assets/feathericons/feather.svg");
+  }
+  &.icon-figma {
+    background-image: url("assets/feathericons/figma.svg");
+  }
+  &.icon-file-minus {
+    background-image: url("assets/feathericons/file-minus.svg");
+  }
+  &.icon-file-plus {
+    background-image: url("assets/feathericons/file-plus.svg");
+  }
+  &.icon-file-text {
+    background-image: url("assets/feathericons/file-text.svg");
+  }
+  &.icon-file {
+    background-image: url("assets/feathericons/file.svg");
+  }
+  &.icon-film {
+    background-image: url("assets/feathericons/film.svg");
+  }
+  &.icon-filter {
+    background-image: url("assets/feathericons/filter.svg");
+  }
+  &.icon-flag {
+    background-image: url("assets/feathericons/flag.svg");
+  }
+  &.icon-folder-minus {
+    background-image: url("assets/feathericons/folder-minus.svg");
+  }
+  &.icon-folder-plus {
+    background-image: url("assets/feathericons/folder-plus.svg");
+  }
+  &.icon-folder {
+    background-image: url("assets/feathericons/folder.svg");
+  }
+  &.icon-framer {
+    background-image: url("assets/feathericons/framer.svg");
+  }
+  &.icon-frown {
+    background-image: url("assets/feathericons/frown.svg");
+  }
+  &.icon-gift {
+    background-image: url("assets/feathericons/gift.svg");
+  }
+  &.icon-git-branch {
+    background-image: url("assets/feathericons/git-branch.svg");
+  }
+  &.icon-git-commit {
+    background-image: url("assets/feathericons/git-commit.svg");
+  }
+  &.icon-git-merge {
+    background-image: url("assets/feathericons/git-merge.svg");
+  }
+  &.icon-git-pull-request {
+    background-image: url("assets/feathericons/git-pull-request.svg");
+  }
+  &.icon-github {
+    background-image: url("assets/feathericons/github.svg");
+  }
+  &.icon-gitlab {
+    background-image: url("assets/feathericons/gitlab.svg");
+  }
+  &.icon-globe {
+    background-image: url("assets/feathericons/globe.svg");
+  }
+  &.icon-grid {
+    background-image: url("assets/feathericons/grid.svg");
+  }
+  &.icon-hard-drive {
+    background-image: url("assets/feathericons/hard-drive.svg");
+  }
+  &.icon-hash {
+    background-image: url("assets/feathericons/hash.svg");
+  }
+  &.icon-headphones {
+    background-image: url("assets/feathericons/headphones.svg");
+  }
+  &.icon-heart {
+    background-image: url("assets/feathericons/heart.svg");
+  }
+  &.icon-help-circle {
+    background-image: url("assets/feathericons/help-circle.svg");
+  }
+  &.icon-hexagon {
+    background-image: url("assets/feathericons/hexagon.svg");
+  }
+  &.icon-home {
+    background-image: url("assets/feathericons/home.svg");
+  }
+  &.icon-image {
+    background-image: url("assets/feathericons/image.svg");
+  }
+  &.icon-inbox {
+    background-image: url("assets/feathericons/inbox.svg");
+  }
+  &.icon-info {
+    background-image: url("assets/feathericons/info.svg");
+  }
+  &.icon-instagram {
+    background-image: url("assets/feathericons/instagram.svg");
+  }
+  &.icon-italic {
+    background-image: url("assets/feathericons/italic.svg");
+  }
+  &.icon-key {
+    background-image: url("assets/feathericons/key.svg");
+  }
+  &.icon-layers {
+    background-image: url("assets/feathericons/layers.svg");
+  }
+  &.icon-layout {
+    background-image: url("assets/feathericons/layout.svg");
+  }
+  &.icon-life-buoy {
+    background-image: url("assets/feathericons/life-buoy.svg");
+  }
+  &.icon-link-2 {
+    background-image: url("assets/feathericons/link-2.svg");
+  }
+  &.icon-link {
+    background-image: url("assets/feathericons/link.svg");
+  }
+  &.icon-linkedin {
+    background-image: url("assets/feathericons/linkedin.svg");
+  }
+  &.icon-list {
+    background-image: url("assets/feathericons/list.svg");
+  }
+  &.icon-loader {
+    background-image: url("assets/feathericons/loader.svg");
+  }
+  &.icon-lock {
+    background-image: url("assets/feathericons/lock.svg");
+  }
+  &.icon-log-in {
+    background-image: url("assets/feathericons/log-in.svg");
+  }
+  &.icon-log-out {
+    background-image: url("assets/feathericons/log-out.svg");
+  }
+  &.icon-mail {
+    background-image: url("assets/feathericons/mail.svg");
+  }
+  &.icon-map-pin {
+    background-image: url("assets/feathericons/map-pin.svg");
+  }
+  &.icon-map {
+    background-image: url("assets/feathericons/map.svg");
+  }
+  &.icon-maximize-2 {
+    background-image: url("assets/feathericons/maximize-2.svg");
+  }
+  &.icon-maximize {
+    background-image: url("assets/feathericons/maximize.svg");
+  }
+  &.icon-meh {
+    background-image: url("assets/feathericons/meh.svg");
+  }
+  &.icon-menu {
+    background-image: url("assets/feathericons/menu.svg");
+  }
+  &.icon-message-circle {
+    background-image: url("assets/feathericons/message-circle.svg");
+  }
+  &.icon-message-square {
+    background-image: url("assets/feathericons/message-square.svg");
+  }
+  &.icon-mic-off {
+    background-image: url("assets/feathericons/mic-off.svg");
+  }
+  &.icon-mic {
+    background-image: url("assets/feathericons/mic.svg");
+  }
+  &.icon-minimize-2 {
+    background-image: url("assets/feathericons/minimize-2.svg");
+  }
+  &.icon-minimize {
+    background-image: url("assets/feathericons/minimize.svg");
+  }
+  &.icon-minus-circle {
+    background-image: url("assets/feathericons/minus-circle.svg");
+  }
+  &.icon-minus-square {
+    background-image: url("assets/feathericons/minus-square.svg");
+  }
+  &.icon-minus {
+    background-image: url("assets/feathericons/minus.svg");
+  }
+  &.icon-monitor {
+    background-image: url("assets/feathericons/monitor.svg");
+  }
+  &.icon-moon {
+    background-image: url("assets/feathericons/moon.svg");
+  }
+  &.icon-more-horizontal {
+    background-image: url("assets/feathericons/more-horizontal.svg");
+  }
+  &.icon-more-vertical {
+    background-image: url("assets/feathericons/more-vertical.svg");
+  }
+  &.icon-mouse-pointer {
+    background-image: url("assets/feathericons/mouse-pointer.svg");
+  }
+  &.icon-move {
+    background-image: url("assets/feathericons/move.svg");
+  }
+  &.icon-music {
+    background-image: url("assets/feathericons/music.svg");
+  }
+  &.icon-navigation-2 {
+    background-image: url("assets/feathericons/navigation-2.svg");
+  }
+  &.icon-navigation {
+    background-image: url("assets/feathericons/navigation.svg");
+  }
+  &.icon-octagon {
+    background-image: url("assets/feathericons/octagon.svg");
+  }
+  &.icon-package {
+    background-image: url("assets/feathericons/package.svg");
+  }
+  &.icon-paperclip {
+    background-image: url("assets/feathericons/paperclip.svg");
+  }
+  &.icon-pause-circle {
+    background-image: url("assets/feathericons/pause-circle.svg");
+  }
+  &.icon-pause {
+    background-image: url("assets/feathericons/pause.svg");
+  }
+  &.icon-pen-tool {
+    background-image: url("assets/feathericons/pen-tool.svg");
+  }
+  &.icon-percent {
+    background-image: url("assets/feathericons/percent.svg");
+  }
+  &.icon-phone-call {
+    background-image: url("assets/feathericons/phone-call.svg");
+  }
+  &.icon-phone-forwarded {
+    background-image: url("assets/feathericons/phone-forwarded.svg");
+  }
+  &.icon-phone-incoming {
+    background-image: url("assets/feathericons/phone-incoming.svg");
+  }
+  &.icon-phone-missed {
+    background-image: url("assets/feathericons/phone-missed.svg");
+  }
+  &.icon-phone-off {
+    background-image: url("assets/feathericons/phone-off.svg");
+  }
+  &.icon-phone-outgoing {
+    background-image: url("assets/feathericons/phone-outgoing.svg");
+  }
+  &.icon-phone {
+    background-image: url("assets/feathericons/phone.svg");
+  }
+  &.icon-pie-chart {
+    background-image: url("assets/feathericons/pie-chart.svg");
+  }
+  &.icon-play-circle {
+    background-image: url("assets/feathericons/play-circle.svg");
+  }
+  &.icon-play {
+    background-image: url("assets/feathericons/play.svg");
+  }
+  &.icon-plus-circle {
+    background-image: url("assets/feathericons/plus-circle.svg");
+  }
+  &.icon-plus-square {
+    background-image: url("assets/feathericons/plus-square.svg");
+  }
+  &.icon-plus {
+    background-image: url("assets/feathericons/plus.svg");
+  }
+  &.icon-pocket {
+    background-image: url("assets/feathericons/pocket.svg");
+  }
+  &.icon-power {
+    background-image: url("assets/feathericons/power.svg");
+  }
+  &.icon-printer {
+    background-image: url("assets/feathericons/printer.svg");
+  }
+  &.icon-radio {
+    background-image: url("assets/feathericons/radio.svg");
+  }
+  &.icon-refresh-ccw {
+    background-image: url("assets/feathericons/refresh-ccw.svg");
+  }
+  &.icon-refresh-cw {
+    background-image: url("assets/feathericons/refresh-cw.svg");
+  }
+  &.icon-repeat {
+    background-image: url("assets/feathericons/repeat.svg");
+  }
+  &.icon-rewind {
+    background-image: url("assets/feathericons/rewind.svg");
+  }
+  &.icon-rotate-ccw {
+    background-image: url("assets/feathericons/rotate-ccw.svg");
+  }
+  &.icon-rotate-cw {
+    background-image: url("assets/feathericons/rotate-cw.svg");
+  }
+  &.icon-rss {
+    background-image: url("assets/feathericons/rss.svg");
+  }
+  &.icon-save {
+    background-image: url("assets/feathericons/save.svg");
+  }
+  &.icon-scissors {
+    background-image: url("assets/feathericons/scissors.svg");
+  }
+  &.icon-search {
+    background-image: url("assets/feathericons/search.svg");
+  }
+  &.icon-send {
+    background-image: url("assets/feathericons/send.svg");
+  }
+  &.icon-server {
+    background-image: url("assets/feathericons/server.svg");
+  }
+  &.icon-settings {
+    background-image: url("assets/feathericons/settings.svg");
+  }
+  &.icon-share-2 {
+    background-image: url("assets/feathericons/share-2.svg");
+  }
+  &.icon-share {
+    background-image: url("assets/feathericons/share.svg");
+  }
+  &.icon-shield-off {
+    background-image: url("assets/feathericons/shield-off.svg");
+  }
+  &.icon-shield {
+    background-image: url("assets/feathericons/shield.svg");
+  }
+  &.icon-shopping-bag {
+    background-image: url("assets/feathericons/shopping-bag.svg");
+  }
+  &.icon-shopping-cart {
+    background-image: url("assets/feathericons/shopping-cart.svg");
+  }
+  &.icon-shuffle {
+    background-image: url("assets/feathericons/shuffle.svg");
+  }
+  &.icon-sidebar {
+    background-image: url("assets/feathericons/sidebar.svg");
+  }
+  &.icon-skip-back {
+    background-image: url("assets/feathericons/skip-back.svg");
+  }
+  &.icon-skip-forward {
+    background-image: url("assets/feathericons/skip-forward.svg");
+  }
+  &.icon-slack {
+    background-image: url("assets/feathericons/slack.svg");
+  }
+  &.icon-slash {
+    background-image: url("assets/feathericons/slash.svg");
+  }
+  &.icon-sliders {
+    background-image: url("assets/feathericons/sliders.svg");
+  }
+  &.icon-smartphone {
+    background-image: url("assets/feathericons/smartphone.svg");
+  }
+  &.icon-smile {
+    background-image: url("assets/feathericons/smile.svg");
+  }
+  &.icon-speaker {
+    background-image: url("assets/feathericons/speaker.svg");
+  }
+  &.icon-square {
+    background-image: url("assets/feathericons/square.svg");
+  }
+  &.icon-star {
+    background-image: url("assets/feathericons/star.svg");
+  }
+  &.icon-stop-circle {
+    background-image: url("assets/feathericons/stop-circle.svg");
+  }
+  &.icon-sun {
+    background-image: url("assets/feathericons/sun.svg");
+  }
+  &.icon-sunrise {
+    background-image: url("assets/feathericons/sunrise.svg");
+  }
+  &.icon-sunset {
+    background-image: url("assets/feathericons/sunset.svg");
+  }
+  &.icon-tablet {
+    background-image: url("assets/feathericons/tablet.svg");
+  }
+  &.icon-tag {
+    background-image: url("assets/feathericons/tag.svg");
+  }
+  &.icon-target {
+    background-image: url("assets/feathericons/target.svg");
+  }
+  &.icon-terminal {
+    background-image: url("assets/feathericons/terminal.svg");
+  }
+  &.icon-thermometer {
+    background-image: url("assets/feathericons/thermometer.svg");
+  }
+  &.icon-thumbs-down {
+    background-image: url("assets/feathericons/thumbs-down.svg");
+  }
+  &.icon-thumbs-up {
+    background-image: url("assets/feathericons/thumbs-up.svg");
+  }
+  &.icon-toggle-left {
+    background-image: url("assets/feathericons/toggle-left.svg");
+  }
+  &.icon-toggle-right {
+    background-image: url("assets/feathericons/toggle-right.svg");
+  }
+  &.icon-tool {
+    background-image: url("assets/feathericons/tool.svg");
+  }
+  &.icon-trash-2 {
+    background-image: url("assets/feathericons/trash-2.svg");
+  }
+  &.icon-trash {
+    background-image: url("assets/feathericons/trash.svg");
+  }
+  &.icon-trello {
+    background-image: url("assets/feathericons/trello.svg");
+  }
+  &.icon-trending-down {
+    background-image: url("assets/feathericons/trending-down.svg");
+  }
+  &.icon-trending-up {
+    background-image: url("assets/feathericons/trending-up.svg");
+  }
+  &.icon-triangle{
+    background-image: url("assets/feathericons/triangle.svg");
+  }
+  &.icon-truck {
+    background-image: url("assets/feathericons/truck.svg");
+  }
+  &.icon-tv {
+    background-image: url("assets/feathericons/tv.svg");
+  }
+  &.icon-twitch {
+    background-image: url("assets/feathericons/twitch.svg");
+  }
+  &.icon-twitter {
+    background-image: url("assets/feathericons/twitter.svg");
+  }
+  &.icon-type {
+    background-image: url("assets/feathericons/type.svg");
+  }
+  &.icon-hash {
+    background-image: url("assets/feathericons/umbrella.svg");
+  }
+  &.icon-underline {
+    background-image: url("assets/feathericons/underline.svg");
+  }
+  &.icon-unlock {
+    background-image: url("assets/feathericons/unlock.svg");
+  }
+  &.icon-upload-cloud {
+    background-image: url("assets/feathericons/upload-cloud.svg");
+  }
+  &.icon-upload {
+    background-image: url("assets/feathericons/upload.svg");
+  }
+  &.icon-user-check {
+    background-image: url("assets/feathericons/user-check.svg");
+  }
+  &.icon-user-minus {
+    background-image: url("assets/feathericons/user-minus.svg");
+  }
+  &.icon-user-plus {
+    background-image: url("assets/feathericons/user-plus.svg");
+  }
+  &.icon-user-x {
+    background-image: url("assets/feathericons/user-x.svg");
+  }
+  &.icon-user {
+    background-image: url("assets/feathericons/user.svg");
+  }
+  &.icon-users {
+    background-image: url("assets/feathericons/users.svg");
+  }
+  &.icon-video-off {
+    background-image: url("assets/feathericons/video-off.svg");
+  }
+  &.icon-video {
+    background-image: url("assets/feathericons/video.svg");
+  }
+  &.icon-voicemail {
+    background-image: url("assets/feathericons/voicemail.svg");
+  }
+  &.icon-volume-1 {
+    background-image: url("assets/feathericons/volume-1.svg");
+  }
+  &.icon-volume-2 {
+    background-image: url("assets/feathericons/volume-2.svg");
+  }
+  &.icon-volume-x {
+    background-image: url("assets/feathericons/volume-x.svg");
+  }
+  &.icon-volume {
+    background-image: url("assets/feathericons/volume.svg");
+  }
+  &.icon-watch {
+    background-image: url("assets/feathericons/watch.svg");
+  }
+  &.icon-wifi-off {
+    background-image: url("assets/feathericons/wifi-off.svg");
+  }
+  &.icon-wifi {
+    background-image: url("assets/feathericons/wifi.svg");
+  }
+  &.icon-wind {
+    background-image: url("assets/feathericons/wind.svg");
+  }
+  &.icon-x-circle {
+    background-image: url("assets/feathericons/x-circle.svg");
+  }
+  &.icon-x-octagon {
+    background-image: url("assets/feathericons/x-octagon.svg");
+  }
+  &.icon-x-square {
+    background-image: url("assets/feathericons/x-square.svg");
+  }
+  &.icon-x {
+    background-image: url("assets/feathericons/x.svg");
+  }
+  &.icon-youtube {
+    background-image: url("assets/feathericons/youtube.svg");
+  }
+  &.icon-zap-off {
+    background-image: url("assets/feathericons/zap-off.svg");
+  }
+  &.icon-zap {
+    background-image: url("assets/feathericons/zap.svg");
+  }
+  &.icon-zoom-in {
+    background-image: url("assets/feathericons/zoom-in.svg");
+  }
+  &.icon-zoom-out {
+    background-image: url("assets/feathericons/zoom-out.svg");
+  }
+}

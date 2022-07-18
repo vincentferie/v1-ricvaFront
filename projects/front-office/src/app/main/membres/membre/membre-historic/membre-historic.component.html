@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-ricva-card cardTitle="Historique membre" cardClass="datatable-list" [cardActions]="cardActions" [loadCard]="loading$ | async" (refresh)="refresh()">
+      <div class="dt-responsive table-responsive">
+        <table class="table table-striped row-border table-hover">
+          <thead>
+            <tr>
+              <th>Numéros d'ordre</th>
+              <th>Nom</th>
+              <th>Prénoms</th>
+              <th>Créer le</th>
+              <th>Modifier le</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of objectList$ | async">
+              <td>{{item.numeroOrdre}}</td>
+              <td>{{item.nom}}</td>
+              <td>{{item.prenoms}}</td>
+              <td>{{item.created | date: 'dd/MM/yyyy à HH:mm:ss'}}</td>
+              <td>
+                {{item.updated | date: 'dd/MM/yyyy à HH:mm:ss'}}
+                <app-button-actions [styleClass]="'overlay-edit'" [btnClass]="'btn-actions'" [actions]="actions" (executeAction)="executeAction($event, item)"></app-button-actions>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-ricva-card>
+  </div>
+</div>
+<app-modal-slide *ngIf="item || itemDetails" [open]="open" (close)="close()">
+  <div class="modal-slide-header bg-primary">
+    <h5 *ngIf="itemDetails" class="mb-0">Détails client</h5>
+    <h5 *ngIf="item" class="mb-0">Modifier client</h5>
+  </div>
+  <div class="modal-slide-body">
+    <div class="row">
+      <div class="col-md-12">
+        <app-membre-form *ngIf="item" inputColClass="col-md-12" [(item)]="item"></app-membre-form>
+        <app-membre-details *ngIf="itemDetails" [(item)]="itemDetails"></app-membre-details>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="item"  class="modal-slide-footer">
+    <app-button-form [loading]="loading$ | async" [disabledSave]="!item || (loading$ | async)" [disabledReset]="loading$ | async"
+      titleLoading="Chargement..." titleSave="Enregistrer" titleReset="Réinitialiser" resetClass="m-l-20"
+      saveIconClass="fa fa-edit" resetIconClass="fa fa-times" (save)="save()" (reset)="reset()"></app-button-form>
+  </div>
+</app-modal-slide>
+<app-ricva-delete-ui-modal [loading]="loading$ | async" (close)="close()" (delete)="delete()"></app-ricva-delete-ui-modal>
+

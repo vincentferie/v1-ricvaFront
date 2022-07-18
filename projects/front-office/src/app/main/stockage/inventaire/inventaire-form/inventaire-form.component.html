@@ -1,0 +1,55 @@
+<form [formGroup]="createUpdateForm" class="editForm">
+  <div class="row">
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="stockProduit" class="form-label">Stock produit</label>
+        <select class="form-control" id="stockProduit" formControlName="stockProduit"
+          [ngClass]="{'is-invalid': !createUpdateControls.stockProduit.valid && (createUpdateControls.stockProduit.dirty || createUpdateControls.stockProduit.touched)}">
+          <option value>Selectionner stock produit...</option>
+          <option *ngFor="let item of stockProduitList" [ngValue]="item">{{item.libelle}}</option>
+        </select>
+        <label *ngIf="!createUpdateControls.stockProduit.valid && (createUpdateControls.stockProduit.dirty || createUpdateControls.stockProduit.touched)"
+          id="stockProduit-error" class="error jquery-validation-error small form-text invalid-feedback">Le stock produit est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="speculation" class="form-label">Spéculation</label>
+        <select class="form-control" id="speculation" formControlName="speculation"
+          [ngClass]="{'is-invalid': !createUpdateControls.speculation.valid && (createUpdateControls.speculation.dirty || createUpdateControls.speculation.touched)}">
+          <option value>Selectionner spéculation...</option>
+          <option *ngFor="let item of speculationList" [ngValue]="item">{{item.libelle}}</option>
+        </select>
+        <label *ngIf="!createUpdateControls.speculation.valid && (createUpdateControls.speculation.dirty || createUpdateControls.speculation.touched)"
+          id="speculation-error" class="error jquery-validation-error small form-text invalid-feedback">La spéculation est requise.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="quantite" class="form-label">Quantité</label>
+        <input type="number" class="form-control" id="quantite" formControlName="quantite" placeholder="Quantité"
+          [ngClass]="{'is-invalid': !createUpdateControls.quantite.valid && (createUpdateControls.quantite.dirty || createUpdateControls.quantite.touched)}">
+        <label *ngIf="!createUpdateControls.quantite.valid && (createUpdateControls.quantite.dirty || createUpdateControls.quantite.touched)"
+          id="quantite-error" class="error jquery-validation-error small form-text invalid-feedback">La quantité est requise.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="nombre_sacs" class="form-label">Nombre de sacs</label>
+        <input type="number" class="form-control" id="nombre_sacs" formControlName="nombre_sacs" placeholder="Nombre de sacs"
+          [ngClass]="{'is-invalid': !createUpdateControls.nombre_sacs.valid && (createUpdateControls.nombre_sacs.dirty || createUpdateControls.nombre_sacs.touched)}">
+        <label *ngIf="!createUpdateControls.nombre_sacs.valid && (createUpdateControls.nombre_sacs.dirty || createUpdateControls.nombre_sacs.touched)"
+          id="nombre_sacs-error" class="error jquery-validation-error small form-text invalid-feedback">Le nombre de sacs est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="observation" class="form-label">Observation</label>
+        <textarea class="form-control" id="observation" formControlName="observation" placeholder="Observation"
+          [ngClass]="{'is-invalid': !createUpdateControls.observation.valid && (createUpdateControls.observation.dirty || createUpdateControls.observation.touched)}"></textarea>
+        <label *ngIf="!createUpdateControls.observation.valid && (createUpdateControls.observation.dirty || createUpdateControls.observation.touched)"
+          id="observation-error" class="error jquery-validation-error small form-text invalid-feedback">L'observation est requise.</label>
+      </div>
+    </div>
+  </div>
+</form>

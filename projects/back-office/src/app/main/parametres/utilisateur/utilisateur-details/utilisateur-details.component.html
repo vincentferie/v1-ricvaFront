@@ -1,0 +1,30 @@
+<div class="details">
+  <div class="details-item">
+    <h5>Nom</h5>
+    <span>{{item.nom}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Prénoms</h5>
+    <span>{{item.prenoms}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Adresse email</h5>
+    <span>{{item.email}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Role</h5>
+    <span>{{item.role?.libelle}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Contact</h5>
+    <span>{{item.contact}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Créé le</h5>
+    <span>{{item.created | date: 'dd/MM/yyyy'}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Modifié le</h5>
+    <span>{{item.updated | date: 'dd/MM/yyyy'}}</span>
+  </div>
+</div>

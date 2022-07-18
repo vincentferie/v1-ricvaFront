@@ -1,0 +1,12 @@
+<button type="button" [disabled]="disabledSave" (click)="emitSave()" class="btn btn-primary btn-raised" [ngClass]="saveClass">
+  <ng-container *ngIf="loading; else icon">
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    <span class="sr-only">{{titleLoading}}</span>
+  </ng-container>
+  <ng-template #icon><i [ngClass]="saveIconClass"></i></ng-template>
+  {{titleSave}}
+</button>
+<button type="button" [disabled]="disabledReset" (click)="emitReset()" class="btn btn-secondary btn-raised" [ngClass]="resetClass">
+  <i [ngClass]="resetIconClass"></i>
+  {{titleReset}}
+</button>

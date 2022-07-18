@@ -1,0 +1,36 @@
+<div class="user-profile user-card mb-4">
+  <div class="card-body py-0">
+    <div class="user-about-block m-0">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="nav nav-tabs profile-tabs nav-fill" id="myTab" role="tablist">
+            <li *ngFor="let item of navigation" class="nav-item">
+              <a class="nav-link text-reset" [ngClass]="{'active': activeTab === item.id}" (click)="activeTab = item.id" [id]="item.id+'-tab'" data-toggle="tab" href="javascript:" role="tab" aria-controls="tab" aria-selected="true"><i [ngClass]="item.icon" class="mr-2"></i>{{item.title}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- profile body start -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="tab-content" id="myTabContent">
+      <div *ngFor="let item of navigation" class="tab-pane fade" [ngClass]="{'show active': activeTab === item.id}" [id]="item.id" role="tabpanel" aria-labelledby="tab">
+        <div class="merge-card">
+          <div class="row">
+            <div *ngFor="let elt of item.children" class="col-xl-4 col-md-6 cursor-pointer" (click)="navigateTo(elt.url)">
+              <app-card [hidHeader]="true" [cardClass]="'text-white widget-visitor-card ' + elt.color" blockClass="text-center">
+                <h2 class="text-white">{{elt.title}}</h2>
+                <i [ngClass]="elt.icon"></i>
+              </app-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- profile body end -->

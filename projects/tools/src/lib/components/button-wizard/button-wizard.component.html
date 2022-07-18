@@ -1,0 +1,8 @@
+<button previousStep type="button" *ngIf="hasPrev" class="btn btn-secondary btn-raised" [ngClass]="prevClass">
+  <i [ngClass]="prevIconClass"></i>
+  {{titlePrev}}
+</button>
+<button nextStep type="button" *ngIf="hasNext" class="btn btn-primary btn-raised" [ngClass]="nextClass">
+  <i [ngClass]="nextIconClass"></i>
+  {{titleNext}}
+</button>

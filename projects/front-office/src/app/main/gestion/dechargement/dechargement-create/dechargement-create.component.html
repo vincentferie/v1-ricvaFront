@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-ricva-card cardTitle="Ajouter déchargement" [cardActions]="cardActions" [hasRefresh]="false">
+      <wizard #wizard class="arc-wizard checkout" navBarLayout="large-filled-symbols">
+        <wizard-step stepTitle="Origine" navigationSymbol="&#xf3c5;" navigationSymbolFontFamily="Font Awesome\ 5 Free">
+          <app-dechargement-form #origineDechargementForm [sections]="['origine']" inputColClass="col-md-6" [(item)]="item"></app-dechargement-form>
+          <div class="form-group text-center p-t-40">
+            <app-button-wizard [hasNext]="true" [hasPrev]="false" titleNext="Suivant" nextIconClass="fa fa-chevron-right"></app-button-wizard>
+          </div>
+        </wizard-step>
+        <wizard-step stepTitle="Acheteur" navigationSymbol="&#xf007;" navigationSymbolFontFamily="Font Awesome\ 5 Free">
+          <app-dechargement-form #acheteurDechargementForm [sections]="['acheteur']" inputColClass="col-md-6" [(item)]="item"></app-dechargement-form>
+          <div class="form-group text-center p-t-40">
+            <app-button-wizard [hasNext]="true" [hasPrev]="true" titleNext="Suivant" titlePrev="Précédent" nextClass="m-l-20"
+              nextIconClass="fa fa-chevron-right" prevIconClass="fa fa-chevron-left"></app-button-wizard>
+          </div>
+        </wizard-step>
+        <wizard-step stepTitle="Transport" navigationSymbol="&#xf0d1;" navigationSymbolFontFamily="Font Awesome\ 5 Free">
+          <app-dechargement-form #transportDechargementForm [sections]="['transport']" inputColClass="col-md-6" [(item)]="item"></app-dechargement-form>
+          <div class="form-group text-center p-t-40">
+            <app-button-wizard [hasNext]="true" [hasPrev]="true" titleNext="Suivant" titlePrev="Précédent" nextClass="m-l-20"
+              nextIconClass="fa fa-chevron-right" prevIconClass="fa fa-chevron-left"></app-button-wizard>
+          </div>
+        </wizard-step>
+        <wizard-step stepTitle="Destination" navigationSymbol="&#xf5a0;" navigationSymbolFontFamily="Font Awesome\ 5 Free">
+          <app-dechargement-form #destinationDechargementForm [sections]="['destination']" inputColClass="col-md-6" [(item)]="item"></app-dechargement-form>
+          <div class="form-group text-center p-t-40">
+            <app-button-wizard [hasNext]="false" [hasPrev]="true" titlePrev="Précédent" prevIconClass="fa fa-chevron-left"></app-button-wizard>
+            <app-button-form [loading]="loading$ | async" [disabledSave]="!item || (loading$ | async)" [disabledReset]="loading$ | async"
+              titleLoading="Chargement..." titleSave="Enregistrer" titleReset="Réinitialiser" saveClass="m-l-20" resetClass="m-l-20"
+              saveIconClass="fa fa-edit" resetIconClass="fa fa-times" (save)="save()" (reset)="reset()"></app-button-form>
+          </div>
+        </wizard-step>
+      </wizard>
+    </app-ricva-card>
+  </div>
+</div>

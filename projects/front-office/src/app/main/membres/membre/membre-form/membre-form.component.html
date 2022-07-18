@@ -1,0 +1,131 @@
+<form [formGroup]="createUpdateForm" class="editForm">
+  <div class="row">
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="typeMembre" class="form-label">Type de membre</label>
+        <select class="form-control" id="typeMembre" formControlName="typeMembre"
+          [ngClass]="{'is-invalid': !createUpdateControls.typeMembre.valid && (createUpdateControls.typeMembre.dirty || createUpdateControls.typeMembre.touched)}">
+          <option value>Selectionner type de membre...</option>
+          <option *ngFor="let item of typeMembreList" [ngValue]="item">{{item.libelle}}</option>
+        </select>
+        <label *ngIf="!createUpdateControls.typeMembre.valid && (createUpdateControls.typeMembre.dirty || createUpdateControls.typeMembre.touched)"
+          id="typeMembre-error" class="error jquery-validation-error small form-text invalid-feedback">Le type de membre est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="genre" class="form-label">Civilité</label>
+        <select class="form-control" id="genre" formControlName="genre"
+          [ngClass]="{'is-invalid': !createUpdateControls.genre.valid && (createUpdateControls.genre.dirty || createUpdateControls.genre.touched)}">
+          <option value>Selectionner civilité...</option>
+          <option value="Monsieur">Monsieur</option>
+          <option value="Madame">Madame</option>
+        </select>
+        <label *ngIf="!createUpdateControls.genre.valid && (createUpdateControls.genre.dirty || createUpdateControls.genre.touched)"
+          id="genre-error" class="error jquery-validation-error small form-text invalid-feedback">La civilité est requise.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="matricule" class="form-label">Matricule</label>
+        <input type="text" class="form-control" id="matricule" formControlName="matricule" placeholder="Matricule"
+          [ngClass]="{'is-invalid': !createUpdateControls.matricule.valid && (createUpdateControls.matricule.dirty || createUpdateControls.matricule.touched)}">
+        <label *ngIf="!createUpdateControls.matricule.valid && (createUpdateControls.matricule.dirty || createUpdateControls.matricule.touched)"
+          id="matricule-error" class="error jquery-validation-error small form-text invalid-feedback">Le matricule est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="nom" formControlName="nom" placeholder="Nom"
+          [ngClass]="{'is-invalid': !createUpdateControls.nom.valid && (createUpdateControls.nom.dirty || createUpdateControls.nom.touched)}">
+        <label *ngIf="!createUpdateControls.nom.valid && (createUpdateControls.nom.dirty || createUpdateControls.nom.touched)"
+          id="nom-error" class="error jquery-validation-error small form-text invalid-feedback">Le nom est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="prenoms" class="form-label">Prénoms</label>
+        <input type="text" class="form-control" id="prenoms" formControlName="prenoms" placeholder="Prénoms"
+          [ngClass]="{'is-invalid': !createUpdateControls.prenoms.valid && (createUpdateControls.prenoms.dirty || createUpdateControls.prenoms.touched)}">
+        <label *ngIf="!createUpdateControls.prenoms.valid && (createUpdateControls.prenoms.dirty || createUpdateControls.prenoms.touched)"
+          id="prenoms-error" class="error jquery-validation-error small form-text invalid-feedback">Le prénoms est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="fonction" class="form-label">Fonction</label>
+        <input type="text" class="form-control" id="fonction" formControlName="fonction" placeholder="Fonction"
+          [ngClass]="{'is-invalid': !createUpdateControls.fonction.valid && (createUpdateControls.fonction.dirty || createUpdateControls.fonction.touched)}">
+        <label *ngIf="!createUpdateControls.fonction.valid && (createUpdateControls.fonction.dirty || createUpdateControls.fonction.touched)"
+          id="fonction-error" class="error jquery-validation-error small form-text invalid-feedback">La fonction est requise.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="contact" class="form-label">Contact</label>
+        <input type="number" class="form-control" id="contact" formControlName="contact" placeholder="Contact"
+          [ngClass]="{'is-invalid': !createUpdateControls.contact.valid && (createUpdateControls.contact.dirty || createUpdateControls.contact.touched)}">
+        <label *ngIf="!createUpdateControls.contact.valid && (createUpdateControls.contact.dirty || createUpdateControls.contact.touched)"
+          id="contact-error" class="error jquery-validation-error small form-text invalid-feedback">Le contact est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="dateCreationPlantation" class="form-label">Date création plantation</label>
+        <input type="date" class="form-control" id="dateCreationPlantation" formControlName="dateCreationPlantation" placeholder="Date création plantation"
+          [ngClass]="{'is-invalid': !createUpdateControls.dateCreationPlantation.valid && (createUpdateControls.dateCreationPlantation.dirty || createUpdateControls.dateCreationPlantation.touched)}">
+        <label *ngIf="!createUpdateControls.dateCreationPlantation.valid && (createUpdateControls.dateCreationPlantation.dirty || createUpdateControls.dateCreationPlantation.touched)"
+          id="dateCreationPlantation-error" class="error jquery-validation-error small form-text invalid-feedback">La date création plantation est requise.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="estimationAnnee" class="form-label">Année d'estimation</label>
+        <input type="number" class="form-control" id="estimationAnnee" formControlName="estimationAnnee" placeholder="Année d'estimation"
+          [ngClass]="{'is-invalid': !createUpdateControls.estimationAnnee.valid && (createUpdateControls.estimationAnnee.dirty || createUpdateControls.estimationAnnee.touched)}">
+        <label *ngIf="!createUpdateControls.estimationAnnee.valid && (createUpdateControls.estimationAnnee.dirty || createUpdateControls.estimationAnnee.touched)"
+          id="estimationAnnee-error" class="error jquery-validation-error small form-text invalid-feedback">L'année d'estimation est requis.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="superficieTotale" class="form-label">Superficie totale</label>
+        <input type="number" class="form-control" id="superficieTotale" formControlName="superficieTotale" placeholder="Superficie totale"
+          [ngClass]="{'is-invalid': !createUpdateControls.superficieTotale.valid && (createUpdateControls.superficieTotale.dirty || createUpdateControls.superficieTotale.touched)}">
+        <label *ngIf="!createUpdateControls.superficieTotale.valid && (createUpdateControls.superficieTotale.dirty || createUpdateControls.superficieTotale.touched)"
+          id="superficieTotale-error" class="error jquery-validation-error small form-text invalid-feedback">La superficie totale est requise.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="estimationProduction" class="form-label">Estimation de production</label>
+        <input type="number" class="form-control" id="estimationProduction" formControlName="estimationProduction" placeholder="Estimation de production"
+          [ngClass]="{'is-invalid': !createUpdateControls.estimationProduction.valid && (createUpdateControls.estimationProduction.dirty || createUpdateControls.estimationProduction.touched)}">
+        <label *ngIf="!createUpdateControls.estimationProduction.valid && (createUpdateControls.estimationProduction.dirty || createUpdateControls.estimationProduction.touched)"
+          id="estimationProduction-error" class="error jquery-validation-error small form-text invalid-feedback">L'estimation de production est requise.</label>
+      </div>
+    </div>
+    <div [ngClass]="inputColClass">
+      <div class="form-group">
+        <label for="section" class="form-label">Section</label>
+        <select class="form-control" id="section" formControlName="section"
+          [ngClass]="{'is-invalid': !createUpdateControls.section.valid && (createUpdateControls.section.dirty || createUpdateControls.section.touched)}">
+          <option value>Selectionner Section...</option>
+          <option *ngFor="let item of sectionList" [ngValue]="item">{{item.libelle}}</option>
+        </select>
+        <label *ngIf="!createUpdateControls.section.valid && (createUpdateControls.section.dirty || createUpdateControls.section.touched)"
+          id="section-error" class="error jquery-validation-error small form-text invalid-feedback">La section est requise.</label>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="section" class="form-label">Photo</label>
+        <app-ricva-file-drop [multiple]="false" [fileExtensions]="fileExtensions" [fileMaxSize]="fileMaxSize"
+          [fileControl]="createUpdateControls.photo" (fileData)="setControl($event, 'photo')"></app-ricva-file-drop>
+        <label *ngIf="!createUpdateControls.photo.valid && (createUpdateControls.photo.dirty || createUpdateControls.photo.touched)"
+          id="photo-error" class="error jquery-validation-error small form-text invalid-feedback">La photo est requise.</label>
+      </div>
+    </div>
+  </div>
+</form>

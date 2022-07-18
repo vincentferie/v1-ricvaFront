@@ -1,0 +1,8 @@
+<div class="btn-group dropdown" [ngClass]="styleClass" ngbDropdown>
+  <button type="button" class="btn dropdown-toggle btn-icon" [ngClass]="btnClass" ngbDropdownToggle>
+    <i class="feather icon-settings"></i>
+  </button>
+  <ul class="list-unstyled card-option dropdown-menu.dropdown-menu-right dropdown-menu-right" ngbDropdownMenu>
+    <li *ngFor="let action of actions" class="dropdown-item" (click)="run(action.type)"><a href="javascript:"><span><i class="feather" [ngClass]="action.icon"></i> {{action.title}}</span></a></li>
+  </ul>
+</div>

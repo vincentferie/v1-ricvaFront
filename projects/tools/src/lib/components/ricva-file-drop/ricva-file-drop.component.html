@@ -1,0 +1,7 @@
+<app-file-drop *ngIf="fileControl" [multiple]="multiple" placeholder="Faites glisser & déposez les fichiers ici" browseTitle="Parcourir les fichiers"
+  (fileDrop)="dropped($event, fileControl)" (fileOver)="overred($event)"
+  (fileLeave)="leaved($event)" (fileChange)="changed($event, fileControl)">
+  <ng-container *ngIf="!fileControl.hasError('required') && fileControl.value" class="file-drop-info">
+    <div class="text-center font-weight-bold">[{{fileControl.value.name}}]</div>
+  </ng-container>
+</app-file-drop>

@@ -1,0 +1,30 @@
+<div class="details">
+  <div class="details-item">
+    <h5>Stock produit</h5>
+    <span>{{item.stockProduit.libelle}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Spéculation</h5>
+    <span>{{item.speculation.libelle}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Quantité</h5>
+    <span>{{item.quantite}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Nombre de sacs</h5>
+    <span>{{item.nombre_sacs}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Observation</h5>
+    <span>{{item.observation}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Créé le</h5>
+    <span>{{item.created | date: 'dd/MM/yyyy'}}</span>
+  </div>
+  <div class="details-item">
+    <h5>Modifié le</h5>
+    <span>{{item.updated | date: 'dd/MM/yyyy'}}</span>
+  </div>
+</div>
