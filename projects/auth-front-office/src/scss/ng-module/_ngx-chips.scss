@@ -23,6 +23,7 @@
       line-height: 37px;
       margin-top: 5px;
       margin-right: 10px;
+      border-radius: 15px !important;
       &.tag--editing {
         color: #333 !important;
         background: #fff !important;
@@ -31,11 +32,10 @@
     &.bootstrap {
       @extend tag;
     }
-    &.minimal {
-      tag {
-        border-radius: 15px !important;
-      }
-    }
+#    &.minimal {
+#     tag {     
+#       }
+#    }
     &.dark tag {
       background: $dark-color !important;
     }
