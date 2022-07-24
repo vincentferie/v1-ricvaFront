@@ -1,5 +1,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9522a3b7a90a496593b3fcb3f65d336a)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vincentferie/v1-ricvafront&amp;utm_campaign=Badge_Grade)
-
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vincentferie_v1-ricvafront&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vincentferie_v1-ricvafront)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=vincentferie_v1-ricvafront&metric=bugs)](https://sonarcloud.io/summary/new_code?id=vincentferie_v1-ricvafront)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=vincentferie_v1-ricvafront&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=vincentferie_v1-ricvafront)
 # RIVCA ERP MULTI TENANT
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
